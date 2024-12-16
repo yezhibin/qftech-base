@@ -80,8 +80,8 @@ func (l *Logger) AddCtx(ctx context.Context, field ...zap.Field) (context.Contex
 func Init(config *LogConfig) {
 	if config == nil {
 		config = &LogConfig{
-			MaxCount: 30,
-			MaxSize:  10,
+			MaxCount: 100,
+			MaxSize:  30,
 			Compress: true,
 			FilePath: "./log/server.log",
 			Level:    InfoLevel,
